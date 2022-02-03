@@ -1,14 +1,16 @@
+
+// query 
+
 let plus = document.getElementById ("plus");
 let minus= document.getElementById ("minus");
 let number =document.getElementById ("value") ; 
-
 let result =document.querySelector ("u");
 console.log (result.textContent);
 
 
 
 
-let resultValue = 0 ; 
+let resultValue = 0 ; // this is where we will put the result of the operation between the numbers ("+" || "-") 
 result.textContent = `${resultValue}`;
 
 
@@ -20,9 +22,11 @@ result.textContent = `${resultValue}`;
 plus.addEventListener ("click" , plusFun) ;
 function plusFun () {
 
-   if (number.value != "") {
+   if (number.value !== "") {
+       plus.style.backgroundColor = "lightgrey";
+       minus.style.backgroundColor = "white";
 
-    let transformNumber = parseInt(number.value) ;
+    let transformNumber = parseInt(number.value) ; // we tansform the string to a number 
 
     resultValue +=  transformNumber ; 
     console.log (resultValue);
@@ -45,7 +49,10 @@ function plusFun () {
 minus.addEventListener ("click" , minusFun) ;
 function minusFun () {
 
-    if (number.value != "") {
+    if (number.value !== "") {
+
+        minus.style.backgroundColor = "lightgrey";
+        plus.style.backgroundColor = "white";
 
     let transformNumber = parseInt(number.value) ;
 
